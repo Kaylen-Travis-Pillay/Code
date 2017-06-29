@@ -1,4 +1,4 @@
-#Web development practice
+# Web development practice
 This folder contains my practice work used to learn the various web technologies.
 Note that I use a file naming scheme as follows:
 	-> The prefix in the name denotes the web technology to be practiced in that file.
