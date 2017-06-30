@@ -8,10 +8,10 @@
 	<form>
 		<!-- First and last name text input boxes -->
 		<label for="name">First Name:</label>
-		<input id="name" type="text" name="firstname" placeholder="John">
+		<input id="name" type="text" name="firstname" placeholder="John" required>
 
 		<label for="surname">Last Name:</label>
-		<input id="surname" type="text" name="surname" placeholder="Smith">
+		<input id="surname" type="text" name="surname" placeholder="Smith" required>
 
 		<br>
 		<!-- Male, Female and other radio buttons -->
@@ -28,10 +28,10 @@
 
 		<!-- Email and password inputs with validation -->
 		<label for="email">Email:</label>
-		<input id="email" type="email" name="email" required>
+		<input id="email" type="email" name="email" placeholder="your email" required>
 
 		<label for="password">Password:</label>
-		<input  id="password" type="password" name="password" minlength="5" maxlength="10" size="10" required>
+		<input  id="password" type="password" name="password" pattern=".{5,10}" required title="Password must be between 5 and 10 characters" required>
 
 		<br>
 		<!-- Select inputs for bithday -->
@@ -121,7 +121,7 @@
 		<br>
 		<!-- Checkbox for the terms and conditions -->
 		<label for="terms">I agree to the terms and conditions</label>
-		<input id="terms" type="checkbox" name="terms">
+		<input id="terms" type="checkbox" name="terms" required>
 
 		<br>
 		<!-- Submit button -->
