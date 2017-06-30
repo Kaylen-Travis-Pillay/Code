@@ -9,8 +9,18 @@
 </head>
 <body>
 	<h1>Login</h1>
-	<input type="text" placeholder="username">
-	<input type="password" placeholder="password">
-	<input type="submit">
+	<!-- Form tag allows us to group together all the elements
+		 in the form, and forms have a few attritutes
+
+		 Action - Tells us where the data from the form is 
+		          going to
+		 Method - Tells us whether we want to get data, or
+		          post data to the backend -->
+	<form action="https://www.google.com" method="get">
+		<input name = "username" type="text" placeholder="username">
+		<input name = "password" type="password" placeholder="password">
+		<input type="submit">
+	</form>
+	
 </body>
 </html>
