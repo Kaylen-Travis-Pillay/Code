@@ -1,10 +1,10 @@
-# Project Title
+# Frogs And Flies 
 
-One Paragraph of project description goes here
+Frogs and Flies is an interactive word game the facilitates the teaching and learning of antonyms, synonyms and homonyms. Created as an assignment for my final year BSc Computer Science advanced programming course, Frogs and Flies was developed in C++.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+To get started please head on over to [Frogs And Flies Beta Release](https://github.com/Kaylen-Travis-Pillay/Code/releases/tag/Frogs-and-Flies-v1.0.0) and download all the required files. Next download this file [Frogs And Flies- Word Game](#)
 
 ### Prerequisites
 
