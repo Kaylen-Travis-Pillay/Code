@@ -1,0 +1,13 @@
+body{
+	background-color: #babbbc;
+	padding-top: 70px;
+}
+
+.jumbotron{
+	color: #2c3e50;
+	background-color: #f4f8ff;
+}
+
+.navbar-inverse{
+	background: #2c3e50;
+}
