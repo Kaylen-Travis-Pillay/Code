@@ -1,5 +1,10 @@
 package za.co.ktpsolutions.BankAccount;
 
+/**
+ * 
+ * @author Kaylen-Travis-Pillay
+ *
+ */
 public class BankAccount {
 	
 	//Private data members
@@ -19,6 +24,7 @@ public class BankAccount {
 		SetAccountNumber(accountNumber);
 		SetAccountBalance(accountBalance);
 		SetAnnualInterestRate(annualInterestRate);
+		accountCreationDate = new Date();
 	}
 	
 	private void SetAccountNumber(int accountNumber){
@@ -83,14 +89,46 @@ public class BankAccount {
 		return this.annualInterestRate / 12;
 	}
 	
+	public boolean Withdraw(int amount) {
+		try {
+			if(amount < 0) {
+				throw new Exception();
+			}else if (amount > this.accountBalance) {
+				return false;
+			}else {
+				this.accountBalance -= amount;
+				return true;
+			}
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+			System.out.println("Invalid withdrawal from BankAccount object");
+			return false;
+		}
+	}
 	
+	public boolean Deposit(int amount) {
+		try {
+			if (amount < 0) {
+				throw new Exception();
+			}else {
+				this.accountBalance += amount;
+				return true;
+			}
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+			System.out.println("Invalid deposit amount from BankAccount object");
+			return false;
+		}
+	}
 	
 	public String toString(){
 		StringBuilder displayString = new StringBuilder();
 		displayString.append("Account Number: " + this.accountNumber + "\n");
 		displayString.append("Account Balance: R " + this.accountBalance + "\n");
 		displayString.append("Annual Interest Rate: " + this.annualInterestRate + "%\n");
-		displayString.append("Createion Date: " + this.accountCreationDate.toString() + "\n");
+		displayString.append("Creation Date: " + this.accountCreationDate.toString() + "\n");
 		
 		return displayString.toString();
 	}

@@ -2,6 +2,11 @@ package za.co.ktpsolutions.BankAccount;
 
 import java.util.Calendar;
 
+/**
+ * 
+ * @author Kaylen-Travis-Pillay
+ *
+ */
 public class Date {
 
 	//Private Data Members
