@@ -1,2 +1,0 @@
-MDN Mozilla Development Network: https://developer.mozilla.org/en-US/
-Lorem Ipsum dummy text: http://www.lipsum.com/

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- NOTE that this webpage does not have
+	      any backend and is just practice on
+	      the html front end 
+-->
+<html>
+<head>
+	<title>Simple login</title>
+</head>
+<body>
+	<h1>Login</h1>
+	<!-- Form tag allows us to group together all the elements
+		 in the form, and forms have a few attritutes
+
+		 Action - Tells us where the data from the form is 
+		          going to
+		 Method - Tells us whether we want to get data, or
+		          post data to the backend -->
+	<form action="https://www.google.com" method="post">
+		<label for="username">Username:</label>
+		<input id="username" name = "username" type="text" placeholder="username" required>
+
+		<label for="password">Password:</label>
+		<input id="password" name = "password" type="password" placeholder="password" required>
+		
+		<input type="submit">
+	</form>
+	
+</body>
+</html>
