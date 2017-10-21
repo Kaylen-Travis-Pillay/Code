@@ -8,6 +8,8 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import za.co.ktpsolutions.www.AppAPIClasses.Customer;
+
 public class LandingActivity extends AppCompatActivity {
 
     TextView username;
@@ -29,24 +31,37 @@ public class LandingActivity extends AppCompatActivity {
         myProfile = (Button) findViewById(R.id.btn_MyProfile);
         logout = (Button) findViewById(R.id.btn_Logout);
 
+        Intent intent = getIntent();
+        final Customer loggin_Customer = (Customer) intent.getSerializableExtra("Customer");
+
+        username.setText(loggin_Customer.m_Name);
+
         newOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity( new Intent(LandingActivity.this, NewOrderActivity.class));
+
+                Intent newOrderIntent = new Intent(LandingActivity.this, NewOrderActivity.class);
+                newOrderIntent.putExtra("Customer", loggin_Customer);
+                startActivity(newOrderIntent);
+
             }
         });
 
         currentOrderStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LandingActivity.this, CurrentOrderActivity.class));
+                Intent newOrderIntent = new Intent(LandingActivity.this, CurrentOrderActivity.class);
+                newOrderIntent.putExtra("Customer", loggin_Customer);
+                startActivity(newOrderIntent);
             }
         });
 
         orderHistory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LandingActivity.this, OrderHistoryActivity.class));
+                Intent newOrderIntent = new Intent(LandingActivity.this, OrderHistoryActivity.class);
+                newOrderIntent.putExtra("Customer", loggin_Customer);
+                startActivity(newOrderIntent);
             }
         });
 
